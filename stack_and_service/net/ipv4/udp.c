@@ -2222,7 +2222,7 @@ struct proto udp_prot = {
 };
 EXPORT_SYMBOL(udp_prot);
 
-void udp_proto_multicore_fixup()
+void udp_prot_multicore_fixup()
 {
 	udp_prot.memory_allocated[rte_lcore_id()] = &udp_memory_allocated[rte_lcore_id()];
 }
